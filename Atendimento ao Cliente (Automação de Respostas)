@@ -1,0 +1,66 @@
+1. 📞 Atendimento ao Cliente (Automação de Respostas)
+O objetivo é usar a IA para responder feedbacks e perguntas, garantindo o tom e o contexto corretos.
+
+Exemplo Prático A: Resposta a Crítica (Role Prompting + Restrições)
+Cenário: Um cliente deixou um comentário negativo sobre a lentidão do seu serviço. Técnica Focada: Role Prompting (Assumir a persona) e Restrições (Controlar o tom e o conteúdo da resposta).
+
+Componente	Conteúdo do Prompt	Ação da IA
+Contexto/Role	"Você é o Gerente de Sucesso do Cliente. Seu tom deve ser formal, empático e resolutivo."	Garante um tom profissional, mesmo sob crítica.
+Conteúdo Principal	"Crie uma resposta ao comentário: 'Meu produto demorou 1 semana a mais do que o prometido e isso arruinou meu prazo.'"	A base da resposta.
+Restrições	"1. Peça desculpas por escrito. 2. Não culpe fatores externos. 3. Ofereça um código de desconto de 15% para a próxima compra. 4. Peça para o cliente enviar o número do pedido por mensagem privada."	Impõe ações de negócio específicas e controladas.
+
+Exportar para as Planilhas
+
+Exemplo Prático B: Classificação de Sentimento (Few-shot Prompting)
+Cenário: Classificar comentários recebidos em uma planilha para triagem rápida (Suporte, Vendas, Neutro). Técnica Focada: Few-shot Prompting (Garantir um formato de saída simples e preciso).
+
+Componente	Conteúdo do Prompt	Ação da IA
+Instrução	"Classifique o texto do cliente com uma única palavra: 'Suporte', 'Vendas' ou 'Neutro'."	Define o objetivo da tarefa.
+Exemplo 1	"Texto: Quero saber se é possível fazer um upgrade. Saída: Vendas"	Ensina a classificar consultas de interesse.
+Exemplo 2	"Texto: Meu login está dando erro 500. Saída: Suporte"	Ensina a classificar problemas técnicos.
+Tarefa	"Texto: O artigo de vocês sobre prompts foi ótimo, parabéns! Saída:"	A IA deve retornar Neutro ou Conteúdo, com base nos exemplos dados.
+
+Exportar para as Planilhas
+
+2. ✍️ Geração de Conteúdo (Criação Rápida e Estruturada)
+O objetivo é gerar rascunhos de conteúdo complexo (como artigos ou roteiros) de forma estruturada e lógica, economizando horas de escrita.
+
+Exemplo Prático C: Esboço de Artigo (Chain of Thought + Decomposição)
+Cenário: Preciso de um esboço detalhado para um artigo de blog técnico. Técnica Focada: Chain of Thought (CoT) (Pensar antes de responder) e Divisão de Tarefa (Quebrar o artigo em partes).
+
+Componente	Conteúdo do Prompt	Ação da IA
+Contexto/Role	"Você é um Escritor de Conteúdo Técnico altamente estruturado."	Define a qualidade da escrita.
+Instrução CoT	"Antes de listar os subtítulos, pense no leitor alvo (desenvolvedores juniores) e quais seriam suas três principais dúvidas sobre 'Engenharia de Prompt'."	Força o raciocínio e a priorização das dúvidas antes de escrever.
+Divisão de Tarefa	"Gere o artigo em 3 seções: 1. Introdução e Definição (máx. 100 palavras). 2. 3 Subtítulos (o conteúdo principal, cada um com 3 bullet points). 3. Conclusão com um Call to Action (CTA) para se inscrever na newsletter."	Garante um formato e uma estrutura lógica completa (início, meio, fim, ação).
+
+Exportar para as Planilhas
+
+Exemplo Prático D: Geração de Roteiro (Formato de Saída Específico)
+Cenário: Preciso de um roteiro curto para um vídeo no TikTok com ênfase na dinâmica visual. Técnica Focada: Formato de Saída (Exigir um template de roteiro).
+
+Componente	Conteúdo do Prompt	Ação da IA
+Instrução	"Crie um roteiro de 30 segundos sobre como a IA pode organizar a semana. Use a seguinte estrutura rígida: [Tempo], [Visual], [Áudio/Texto na Tela]."	Define o formato de saída, essencial para a produção de vídeo.
+Conteúdo	"O roteiro deve demonstrar como a IA aplica 'Time Blocking' em 3 etapas."	A essência do conteúdo.
+Resultado Esperado	A IA retorna:, [Visual: Tela do celular desorganizada], [Áudio: 'Sua semana é uma bagunça?']., [Visual: App de IA organizando agenda], [Áudio: 'IA aplica Time Blocking...'].	Cria um produto final que pode ser usado diretamente na produção.
+
+Exportar para as Planilhas
+
+3. 💰 Gestão Financeira (Análise e Categorização)
+O objetivo é automatizar tarefas de controle financeiro, como a triagem de transações, que são repetitivas e baseadas em regras.
+
+Exemplo Prático E: Análise de Viabilidade (Chain of Thought na Lógica)
+Cenário: Analisar a viabilidade de um investimento de R$ 8.000 com base em regras de fluxo de caixa. Técnica Focada: Chain of Thought (Forçar o modelo a seguir a lógica de negócio antes da resposta).
+
+Componente	Conteúdo do Prompt	Ação da IA
+Contexto/Dados	"Regra de Negócio: Não investir se o caixa operacional (R$ 7.500) for menor que 10% do faturamento mensal (R$ 50.000). Investimento proposto: R$ 8.000."	Fornece os dados brutos e a regra para a análise.
+Instrução CoT	"Vamos calcular a decisão passo a passo: 1. Calcule o limite mínimo do caixa (10% de 50.000). 2. Compare o caixa operacional (7.500) com o limite. 3. Compare o investimento (8.000) com o limite. 4. Responda se o investimento é Viável ou Não Viável com base nas regras."	Garante que a IA não "pule" a regra e force uma resposta correta, ou a alucinação de um resultado.
+
+Exportar para as Planilhas
+
+Exemplo Prático F: Categorização de Transações (Restrições)
+Cenário: Automatizar a classificação de extratos bancários para um software de contabilidade. Técnica Focada: Restrições (Garantir um formato de saída fixo para integração).
+
+Componente	Conteúdo do Prompt	Ação da IA
+Instrução	"Classifique as seguintes descrições bancárias em uma das categorias permitidas: 'Serviços', 'Marketing', 'Alimentação', 'Salários'."	Define o universo de categorias aceitas pelo sistema de contabilidade.
+Restrições	"Se a descrição não se encaixar em nenhuma categoria, use 'Pendência de Revisão'. Não invente categorias."	Impede a alucinação de novas categorias, forçando o tratamento de exceção.
+Tarefa	"Descrição: Pagamento AdSense G. Descrição: Transferência João S. Descrição: Compra Padaria X."	A IA deve retornar: Marketing, Salários, Alimentação ou Pendência (se for uma categoria que ela não conseguir encaixar com confiança).
